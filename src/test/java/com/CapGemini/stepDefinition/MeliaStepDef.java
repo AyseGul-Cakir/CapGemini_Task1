@@ -45,7 +45,7 @@ public class MeliaStepDef {
    public void Click_link_ios_app() throws Throwable {
        meliaPage.iosApp.click();
         //Ver visualmente el resultado
-       //https://www.melia.com/es/promo/landing-app/vacacional/index.html?utm_medium=meliacom&utm_source=footerdescarga
+
         BrowserUtils.waitFor(4);
 
         String currentWindowHandle= Driver.get().getWindowHandle();
