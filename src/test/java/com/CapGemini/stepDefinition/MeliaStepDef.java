@@ -16,10 +16,12 @@ public class MeliaStepDef {
    MeliaPage meliaPage =new MeliaPage();
 
 
-   @Given("Open chrome")
+  /* @Given("Open chrome")
     public void openChrome() {
         Driver.get().manage().window().maximize();
    }
+   */
+
 
     @And("^Navigate to melia$")
     public void NavigateToMelia() throws Throwable {
@@ -57,7 +59,7 @@ public class MeliaStepDef {
                String currentUrl = Driver.get().getCurrentUrl();
                System.out.println("currentUrl = " + currentUrl);
                String expectedUrl="https://www.melia.com/es/promo/landing-app/vacacional/index.html?utm_medium=meliacom&utm_source=footerdescarga" ;
-               Assert.assertTrue(currentUrl.equals(expectedUrl));
+               Assert.assertEquals(currentUrl, expectedUrl);
 
 
            }

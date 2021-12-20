@@ -29,10 +29,8 @@ public class ANZStepDef {
 
     @When("^User enters valid details$")
     public void user_enters_valid_details() {
-        Assert.assertEquals(anzPage.single.isSelected(), true);
+        Assert.assertTrue(anzPage.single.isSelected());
         anzPage.property.click();
-
-        Assert.assertEquals(anzPage.property.isEnabled(),true);// cok ilginc
         anzPage.annualIncome.sendKeys("80000");
         anzPage.annualOther.sendKeys("10000");
         anzPage.monthlyExp.sendKeys("500");
